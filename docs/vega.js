@@ -1,8 +1,8 @@
 (function (global, factory) {
-  typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('vega-util')) :
-  typeof define === 'function' && define.amd ? define(['exports', 'vega-util'], factory) :
-  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global.vega = {}, global.vegaUtil));
-})(this, (function (exports, vegaUtil) { 'use strict';
+  typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports) :
+  typeof define === 'function' && define.amd ? define(['exports'], factory) :
+  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global.vega = {}));
+})(this, (function (exports) { 'use strict';
 
   function accessor(fn, fields, name) {
     fn.fields = fields || [];
@@ -18081,15 +18081,14 @@
     }
     initialize(el, width, height, origin, scaleFactor, options) {
       this._options = options || {};
+      const {
+        canvas: externalCanvas,
+        externalContext
+      } = this._options;
+      this._canvas = externalContext ? null : externalCanvas || canvas(1, 1, this._options.type);
 
-      // Support three modes:
-      // 1. External canvas element (OffscreenCanvas or HTMLCanvasElement)
-      // 2. External context (for backward compatibility)
-      // 3. Create new canvas
-      const externalCanvas = this._options.canvas;
-      this._canvas = this._options.externalContext || externalCanvas ? externalCanvas || null : canvas(1, 1, this._options.type); // instantiate a small canvas
-
-      // Only append to DOM if we have a DOM element and an HTMLCanvasElement
+      // Only append to DOM if we have a DOM element and an HTMLCanvasElement.
+      // This ensures we don't attempt to append an OffscreenCanvas to the DOM.
       if (el && this._canvas && typeof HTMLElement !== 'undefined' && this._canvas instanceof HTMLElement) {
         domClear(el, 0).appendChild(this._canvas);
         this._canvas.setAttribute('class', 'marks');
@@ -30142,9 +30141,7 @@
       const as = _.as || Output$1;
 
       // run label layout
-      labelLayout(pulse.materialize(pulse.SOURCE).source || [], _.size, _.sort, array$5(_.offset == null ? 1 : _.offset), array$5(_.anchor || Anchors), _.avoidMarks || [], _.avoidBaseMark !== false, _.lineAnchor || 'end', _.markIndex || 0, _.padding === undefined ? 0 : _.padding, _.method || 'naive'
-      // canvasFactory removed - markBitmaps will use default canvas() which now supports OffscreenCanvas
-      ).forEach(l => {
+      labelLayout(pulse.materialize(pulse.SOURCE).source || [], _.size, _.sort, array$5(_.offset == null ? 1 : _.offset), array$5(_.anchor || Anchors), _.avoidMarks || [], _.avoidBaseMark !== false, _.lineAnchor || 'end', _.markIndex || 0, _.padding === undefined ? 0 : _.padding, _.method || 'naive').forEach(l => {
         // write layout results to data stream
         const t = l.datum;
         t[as[0]] = l.x;
@@ -36918,7 +36915,7 @@
     r = r || new constructor(view.loader());
 
     // Include canvas from view options if provided
-    const options = view.canvas ? vegaUtil.extend({
+    const options = view.canvas ? extend$1({
       canvas: view.canvas
     }, opt) : opt;
 
