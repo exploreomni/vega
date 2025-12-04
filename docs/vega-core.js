@@ -1,8 +1,8 @@
 (function (global, factory) {
-  typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('d3-dsv'), require('topojson-client'), require('d3-array'), require('d3-format'), require('d3-time'), require('d3-time-format'), require('d3-shape'), require('d3-path'), require('d3-scale'), require('d3-interpolate'), require('d3-geo'), require('d3-color'), require('d3-force'), require('d3-hierarchy'), require('d3-delaunay'), require('vega-util'), require('d3-timer')) :
-  typeof define === 'function' && define.amd ? define(['exports', 'd3-dsv', 'topojson-client', 'd3-array', 'd3-format', 'd3-time', 'd3-time-format', 'd3-shape', 'd3-path', 'd3-scale', 'd3-interpolate', 'd3-geo', 'd3-color', 'd3-force', 'd3-hierarchy', 'd3-delaunay', 'vega-util', 'd3-timer'], factory) :
-  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global.vega = {}, global.d3, global.topojson, global.d3, global.d3, global.d3, global.d3, global.d3, global.d3, global.d3, global.d3, global.d3, global.d3, global.d3, global.d3, global.d3, global.vegaUtil, global.d3));
-})(this, (function (exports, d3Dsv, topojsonClient, d3Array, d3Format, d3Time, d3TimeFormat, d3Shape, d3Path, $$2, $$1, d3Geo, d3Color, d3Force, d3Hierarchy, d3Delaunay, vegaUtil, d3Timer) { 'use strict';
+  typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('d3-dsv'), require('topojson-client'), require('d3-array'), require('d3-format'), require('d3-time'), require('d3-time-format'), require('d3-shape'), require('d3-path'), require('d3-scale'), require('d3-interpolate'), require('d3-geo'), require('d3-color'), require('d3-force'), require('d3-hierarchy'), require('d3-delaunay'), require('d3-timer')) :
+  typeof define === 'function' && define.amd ? define(['exports', 'd3-dsv', 'topojson-client', 'd3-array', 'd3-format', 'd3-time', 'd3-time-format', 'd3-shape', 'd3-path', 'd3-scale', 'd3-interpolate', 'd3-geo', 'd3-color', 'd3-force', 'd3-hierarchy', 'd3-delaunay', 'd3-timer'], factory) :
+  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global.vega = {}, global.d3, global.topojson, global.d3, global.d3, global.d3, global.d3, global.d3, global.d3, global.d3, global.d3, global.d3, global.d3, global.d3, global.d3, global.d3, global.d3));
+})(this, (function (exports, d3Dsv, topojsonClient, d3Array, d3Format, d3Time, d3TimeFormat, d3Shape, d3Path, $$2, $$1, d3Geo, d3Color, d3Force, d3Hierarchy, d3Delaunay, d3Timer) { 'use strict';
 
   function _interopNamespaceDefault(e) {
     var n = Object.create(null);
@@ -12617,15 +12617,14 @@
     }
     initialize(el, width, height, origin, scaleFactor, options) {
       this._options = options || {};
+      const {
+        canvas: externalCanvas,
+        externalContext
+      } = this._options;
+      this._canvas = externalContext ? null : externalCanvas || canvas(1, 1, this._options.type);
 
-      // Support three modes:
-      // 1. External canvas element (OffscreenCanvas or HTMLCanvasElement)
-      // 2. External context (for backward compatibility)
-      // 3. Create new canvas
-      const externalCanvas = this._options.canvas;
-      this._canvas = this._options.externalContext || externalCanvas ? externalCanvas || null : canvas(1, 1, this._options.type); // instantiate a small canvas
-
-      // Only append to DOM if we have a DOM element and an HTMLCanvasElement
+      // Only append to DOM if we have a DOM element and an HTMLCanvasElement.
+      // This ensures we don't attempt to append an OffscreenCanvas to the DOM.
       if (el && this._canvas && typeof HTMLElement !== 'undefined' && this._canvas instanceof HTMLElement) {
         domClear(el, 0).appendChild(this._canvas);
         this._canvas.setAttribute('class', 'marks');
@@ -19599,9 +19598,7 @@
       const as = _.as || Output$1;
 
       // run label layout
-      labelLayout(pulse.materialize(pulse.SOURCE).source || [], _.size, _.sort, array$2(_.offset == null ? 1 : _.offset), array$2(_.anchor || Anchors), _.avoidMarks || [], _.avoidBaseMark !== false, _.lineAnchor || 'end', _.markIndex || 0, _.padding === undefined ? 0 : _.padding, _.method || 'naive'
-      // canvasFactory removed - markBitmaps will use default canvas() which now supports OffscreenCanvas
-      ).forEach(l => {
+      labelLayout(pulse.materialize(pulse.SOURCE).source || [], _.size, _.sort, array$2(_.offset == null ? 1 : _.offset), array$2(_.anchor || Anchors), _.avoidMarks || [], _.avoidBaseMark !== false, _.lineAnchor || 'end', _.markIndex || 0, _.padding === undefined ? 0 : _.padding, _.method || 'naive').forEach(l => {
         // write layout results to data stream
         const t = l.datum;
         t[as[0]] = l.x;
@@ -24986,7 +24983,7 @@
     r = r || new constructor(view.loader());
 
     // Include canvas from view options if provided
-    const options = view.canvas ? vegaUtil.extend({
+    const options = view.canvas ? extend({
       canvas: view.canvas
     }, opt) : opt;
 
