@@ -1,6 +1,7 @@
 {
   "name": "@omni-co/vega",
-  "version": "6.2.0",
+  "version": "6.2.0-fork.1",
+  "upstreamVersion": "6.2.0",
   "description": "The Vega visualization grammar.",
   "keywords": [
     "vega",
