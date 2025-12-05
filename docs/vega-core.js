@@ -12612,9 +12612,12 @@
       } = this._options;
       this._canvas = externalContext ? null : externalCanvas || canvas(1, 1, this._options.type);
 
-      // Only append to DOM if we have a DOM element and an HTMLCanvasElement.
-      // This ensures we don't attempt to append an OffscreenCanvas to the DOM.
-      if (el && this._canvas && typeof HTMLElement !== 'undefined' && this._canvas instanceof HTMLElement) {
+      // Only append to DOM if we have a DOM element and it's not an OffscreenCanvas.
+      // OffscreenCanvas cannot be added to DOM and is used for off-thread rendering.
+      // Note: We check for OffscreenCanvas rather than HTMLElement because node-canvas
+      // objects are not HTMLElement instances but can still be appended to jsdom.
+      const isOffscreen = typeof OffscreenCanvas !== 'undefined' && this._canvas instanceof OffscreenCanvas;
+      if (el && this._canvas && !isOffscreen) {
         domClear(el, 0).appendChild(this._canvas);
         this._canvas.setAttribute('class', 'marks');
       }
@@ -21123,7 +21126,7 @@
     resolvefilter: ResolveFilter
   });
 
-  var version$1 = "6.2.0";
+  var version$1 = "6.2.0-fork.1";
 
   const RawCode = 'RawCode';
   const Literal = 'Literal';
