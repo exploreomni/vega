@@ -29,7 +29,7 @@
   },
   "dependencies": {
     "vega-dataflow": "^6.1.0",
-    "@omni-co/vega-scenegraph": "^5.1.0",
+    "@omni-co/vega-scenegraph": "5.1.0-fork.2-beta.1",
     "vega-util": "^2.1.0"
   },
   "devDependencies": {

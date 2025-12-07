@@ -30,9 +30,9 @@
   "dependencies": {
     "vega-dataflow": "^6.1.0",
     "vega-format": "^2.1.0",
-    "@omni-co/vega-functions": "^6.1.0",
+    "@omni-co/vega-functions": "6.1.0-fork.2-beta.1",
     "vega-runtime": "^7.1.0",
-    "@omni-co/vega-scenegraph": "^5.1.0",
+    "@omni-co/vega-scenegraph": "5.1.0-fork.2-beta.1",
     "vega-util": "^2.1.0",
     "d3-array": "^3.2.4",
     "d3-timer": "^3.0.1"
