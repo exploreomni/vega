@@ -1,6 +1,6 @@
 {
   "name": "@omni-co/vega-view-transforms",
-  "version": "5.1.0-fork.2-beta.1",
+  "version": "5.1.0-fork.2-beta.3",
   "description": "View-specific transforms for Vega dataflows.",
   "keywords": [
     "vega",
@@ -29,7 +29,7 @@
   },
   "dependencies": {
     "vega-dataflow": "^6.1.0",
-    "@omni-co/vega-scenegraph": "5.1.0-fork.2-beta.1",
+    "@omni-co/vega-scenegraph": "5.1.0-fork.2-beta.3",
     "vega-util": "^2.1.0"
   },
   "devDependencies": {
