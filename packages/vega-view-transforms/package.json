@@ -1,6 +1,6 @@
 {
   "name": "@omni-co/vega-view-transforms",
-  "version": "5.1.0",
+  "version": "5.1.0-fork.2-beta.1",
   "description": "View-specific transforms for Vega dataflows.",
   "keywords": [
     "vega",

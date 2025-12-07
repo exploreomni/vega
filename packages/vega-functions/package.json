@@ -1,6 +1,6 @@
 {
   "name": "@omni-co/vega-functions",
-  "version": "6.1.0",
+  "version": "6.1.0-fork.2-beta.1",
   "description": "Custom functions for the Vega expression language.",
   "keywords": [
     "vega",

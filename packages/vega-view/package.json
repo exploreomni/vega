@@ -1,6 +1,6 @@
 {
   "name": "@omni-co/vega-view",
-  "version": "6.1.0",
+  "version": "6.1.0-fork.2-beta.1",
   "description": "View component and transforms for Vega visualizations.",
   "keywords": [
     "vega",
