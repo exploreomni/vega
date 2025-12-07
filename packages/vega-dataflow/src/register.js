@@ -1,4 +1,4 @@
-import {hasOwnProperty} from '@omni-co/vega-util';
+import {hasOwnProperty} from 'vega-util';
 
 export const transforms = {};
 

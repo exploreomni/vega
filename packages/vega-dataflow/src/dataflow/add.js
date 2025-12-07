@@ -1,5 +1,5 @@
 import Operator from '../Operator.js';
-import {isFunction} from '@omni-co/vega-util';
+import {isFunction} from 'vega-util';
 
 /**
  * Add an operator to the dataflow graph. This function accepts a

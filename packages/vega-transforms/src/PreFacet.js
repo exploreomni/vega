@@ -1,6 +1,6 @@
 import Facet from './Facet.js';
-import {ingest, tupleid} from '@omni-co/vega-dataflow';
-import {accessorFields, error, inherits} from '@omni-co/vega-util';
+import {ingest, tupleid} from 'vega-dataflow';
+import {accessorFields, error, inherits} from 'vega-util';
 
 /**
  * Partitions pre-faceted data into tuple subflows.

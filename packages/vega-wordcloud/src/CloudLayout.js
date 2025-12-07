@@ -1,4 +1,4 @@
-import {canvas} from '@omni-co/vega-canvas';
+import {canvas} from 'vega-canvas';
 
 /*
 Copyright (c) 2013, Jason Davies.

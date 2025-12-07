@@ -1,5 +1,5 @@
-import {Operator} from '@omni-co/vega-dataflow';
-import {accessor, accessorFields, accessorName, inherits} from '@omni-co/vega-util';
+import {Operator} from 'vega-dataflow';
+import {accessor, accessorFields, accessorName, inherits} from 'vega-util';
 
 /**
  * Wraps an expression function with access to external parameters.

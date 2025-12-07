@@ -1,4 +1,4 @@
-import {extend} from '@omni-co/vega-util';
+import {extend} from 'vega-util';
 import {$selectionId, SelectionId, getter} from './util.js';
 
 /**

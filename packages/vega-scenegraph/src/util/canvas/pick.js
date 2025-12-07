@@ -1,5 +1,5 @@
 import {pickVisit} from '../visit.js';
-import {truthy} from '@omni-co/vega-util';
+import {truthy} from 'vega-util';
 
 export function pick(test) {
   test = test || truthy;

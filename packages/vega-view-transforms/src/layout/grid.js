@@ -6,7 +6,7 @@ import {
 } from '../constants.js';
 import {tempBounds} from './util.js';
 import {Bounds} from '@omni-co/vega-scenegraph';
-import {isObject} from '@omni-co/vega-util';
+import {isObject} from 'vega-util';
 
 // aggregation functions for grid margin determination
 const min = (a, b) => Math.floor(Math.min(a, b));

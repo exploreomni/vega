@@ -1,4 +1,4 @@
-import {truthy} from '@omni-co/vega-util';
+import {truthy} from 'vega-util';
 
 const SKIP = {skip: true};
 

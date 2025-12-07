@@ -1,5 +1,5 @@
 {
-  "name": "@omni-co/vega-canvas",
+  "name": "vega-canvas",
   "version": "2.0.0",
   "description": "Canvas and Image utilities.",
   "keywords": [
@@ -20,9 +20,6 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/exploreomni/vega.git"
-  },
-  "publishConfig": {
-    "access": "public"
   },
   "scripts": {
     "prebuild": "del-cli build",

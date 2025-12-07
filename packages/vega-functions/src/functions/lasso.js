@@ -1,6 +1,6 @@
 import intersect from './intersect.js';
 import {Bounds} from '@omni-co/vega-scenegraph';
-import {array} from '@omni-co/vega-util';
+import {array} from 'vega-util';
 
 /**
  * Appends a new point to the lasso

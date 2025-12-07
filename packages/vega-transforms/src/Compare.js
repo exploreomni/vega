@@ -1,5 +1,5 @@
-import {Operator} from '@omni-co/vega-dataflow';
-import {compare, inherits} from '@omni-co/vega-util';
+import {Operator} from 'vega-dataflow';
+import {compare, inherits} from 'vega-util';
 
 /**
  * Generates a comparator function.

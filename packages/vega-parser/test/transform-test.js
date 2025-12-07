@@ -1,8 +1,8 @@
 import tape from 'tape';
-import {extend} from '@omni-co/vega-util';
-import * as vega from '@omni-co/vega-dataflow';
+import {extend} from 'vega-util';
+import * as vega from 'vega-dataflow';
 import { parse } from '../index.js';
-import * as vegaTransforms from '@omni-co/vega-transforms';
+import * as vegaTransforms from 'vega-transforms';
 
 extend(vega.transforms, vegaTransforms);
 

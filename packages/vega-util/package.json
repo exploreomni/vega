@@ -1,5 +1,5 @@
 {
-  "name": "@omni-co/vega-util",
+  "name": "vega-util",
   "version": "2.1.0",
   "description": "JavaScript utilities for Vega.",
   "keywords": [
@@ -26,8 +26,5 @@
     "pretest": "npm run build -- --config-test",
     "test": "tape 'test/**/*-test.js'",
     "prepublishOnly": "npm test && npm run build"
-  },
-  "publishConfig": {
-    "access": "public"
   }
 }

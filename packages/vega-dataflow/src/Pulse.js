@@ -1,5 +1,5 @@
 import {tupleid} from './Tuple.js';
-import {isArray, visitArray} from '@omni-co/vega-util';
+import {isArray, visitArray} from 'vega-util';
 
 /**
  * Sentinel value indicating pulse propagation should stop.

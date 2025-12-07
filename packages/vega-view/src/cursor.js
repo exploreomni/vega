@@ -1,4 +1,4 @@
-import {isString} from '@omni-co/vega-util';
+import {isString} from 'vega-util';
 
 const Default = 'default';
 

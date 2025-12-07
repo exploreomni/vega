@@ -1,8 +1,8 @@
 import {Params} from '../transforms.js';
 import {entry, fieldRef, isSignal, ref} from '../util.js';
-import {definition} from '@omni-co/vega-dataflow';
+import {definition} from 'vega-dataflow';
 import {parseExpression} from '@omni-co/vega-functions';
-import {error, extend, isArray, isString, stringValue} from '@omni-co/vega-util';
+import {error, extend, isArray, isString, stringValue} from 'vega-util';
 
 /**
  * Parse a data transform specification.

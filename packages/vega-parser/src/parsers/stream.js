@@ -1,6 +1,6 @@
 import {Scope, View} from '../util.js';
 import {parseExpression} from '@omni-co/vega-functions';
-import {error, stringValue} from '@omni-co/vega-util';
+import {error, stringValue} from 'vega-util';
 
 const Timer = 'timer';
 

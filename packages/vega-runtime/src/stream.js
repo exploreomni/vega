@@ -1,4 +1,4 @@
-import {error} from '@omni-co/vega-util';
+import {error} from 'vega-util';
 
 /**
  * Parse an event stream specification.

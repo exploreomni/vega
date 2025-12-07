@@ -17,8 +17,8 @@ import {deref, ref} from '../util.js';
 import {Collect, LegendEntries} from '../transforms.js';
 
 import {parseExpression} from '@omni-co/vega-functions';
-import {isContinuous, isDiscretizing} from '@omni-co/vega-scale';
-import {error} from '@omni-co/vega-util';
+import {isContinuous, isDiscretizing} from 'vega-scale';
+import {error} from 'vega-util';
 
 export default function(spec, scope) {
   const config = scope.config.legend,

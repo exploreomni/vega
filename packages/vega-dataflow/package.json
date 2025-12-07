@@ -1,5 +1,5 @@
 {
-  "name": "@omni-co/vega-dataflow",
+  "name": "vega-dataflow",
   "version": "6.1.0",
   "description": "Reactive dataflow processing.",
   "keywords": [
@@ -30,11 +30,8 @@
     "prepublishOnly": "npm test && npm run build"
   },
   "dependencies": {
-    "@omni-co/vega-format": "^2.1.0",
-    "@omni-co/vega-loader": "^5.1.0",
-    "@omni-co/vega-util": "^2.1.0"
-  },
-  "publishConfig": {
-    "access": "public"
+    "vega-format": "^2.1.0",
+    "vega-loader": "^5.1.0",
+    "vega-util": "^2.1.0"
   }
 }

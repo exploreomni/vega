@@ -10,7 +10,7 @@ import {
   timeFormatLocale
 } from './time.js';
 
-import {error, extend} from '@omni-co/vega-util';
+import {error, extend} from 'vega-util';
 
 const createLocale = (number, time) => extend({}, number, time);
 

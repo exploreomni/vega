@@ -1,5 +1,5 @@
 {
-  "name": "@omni-co/vega-statistics",
+  "name": "vega-statistics",
   "version": "2.0.0",
   "description": "Statistical routines and probability distributions.",
   "keywords": [
@@ -30,8 +30,5 @@
   },
   "dependencies": {
     "d3-array": "^3.2.4"
-  },
-  "publishConfig": {
-    "access": "public"
   }
 }

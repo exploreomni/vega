@@ -1,5 +1,5 @@
 {
-  "name": "@omni-co/vega-projection-extended",
+  "name": "vega-projection-extended",
   "version": "3.1.0",
   "description": "Extended projections for cartographic mapping.",
   "keywords": [
@@ -28,10 +28,7 @@
     "prepublishOnly": "npm run build"
   },
   "dependencies": {
-    "@omni-co/vega-projection": "^2.1.0",
+    "vega-projection": "^2.1.0",
     "d3-geo-projection": "^4.0.0"
-  },
-  "publishConfig": {
-    "access": "public"
   }
 }

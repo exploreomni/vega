@@ -1,6 +1,6 @@
 import Bounds from '../Bounds.js';
 import boundContext from './boundContext.js';
-import {isFunction} from '@omni-co/vega-util';
+import {isFunction} from 'vega-util';
 
 const clipBounds = new Bounds();
 

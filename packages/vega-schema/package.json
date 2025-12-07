@@ -1,5 +1,5 @@
 {
-  "name": "@omni-co/vega-schema",
+  "name": "vega-schema",
   "version": "6.2.0",
   "description": "Generate the Vega JSON schema.",
   "keywords": [
@@ -28,22 +28,19 @@
     "prepublishOnly": "npm test"
   },
   "dependencies": {
-    "@omni-co/vega-scale": "^8.1.0"
+    "vega-scale": "^8.1.0"
   },
   "devDependencies": {
-    "@omni-co/vega-crossfilter": "*",
-    "@omni-co/vega-encode": "*",
-    "@omni-co/vega-force": "*",
-    "@omni-co/vega-geo": "*",
-    "@omni-co/vega-hierarchy": "*",
+    "vega-crossfilter": "*",
+    "vega-encode": "*",
+    "vega-force": "*",
+    "vega-geo": "*",
+    "vega-hierarchy": "*",
     "@omni-co/vega-label": "*",
-    "@omni-co/vega-regression": "*",
-    "@omni-co/vega-transforms": "*",
+    "vega-regression": "*",
+    "vega-transforms": "*",
     "@omni-co/vega-view-transforms": "*",
-    "@omni-co/vega-voronoi": "*",
-    "@omni-co/vega-wordcloud": "*"
-  },
-  "publishConfig": {
-    "access": "public"
+    "vega-voronoi": "*",
+    "vega-wordcloud": "*"
   }
 }

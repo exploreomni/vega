@@ -1,5 +1,5 @@
-import {Operator} from '@omni-co/vega-dataflow';
-import {inherits} from '@omni-co/vega-util';
+import {Operator} from 'vega-dataflow';
+import {inherits} from 'vega-util';
 
 /**
  * Merge a collection of value arrays.

@@ -4,9 +4,9 @@ import {
   randomMixture,
   randomNormal,
   randomUniform
-} from '@omni-co/vega-statistics';
+} from 'vega-statistics';
 
-import {error, hasOwnProperty} from '@omni-co/vega-util';
+import {error, hasOwnProperty} from 'vega-util';
 
 const Distributions = {
   kde:       randomKDE,

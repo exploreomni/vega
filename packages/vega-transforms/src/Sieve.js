@@ -1,5 +1,5 @@
-import {Transform} from '@omni-co/vega-dataflow';
-import {inherits} from '@omni-co/vega-util';
+import {Transform} from 'vega-dataflow';
+import {inherits} from 'vega-util';
 
 /**
  * Propagates a new pulse without any tuples so long as the input

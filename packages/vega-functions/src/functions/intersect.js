@@ -1,5 +1,5 @@
 import {Bounds, intersect} from '@omni-co/vega-scenegraph';
-import {array} from '@omni-co/vega-util';
+import {array} from 'vega-util';
 
 export default function(b, opt, group) {
   if (!b) return [];

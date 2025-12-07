@@ -1,5 +1,5 @@
-import {Transform} from '@omni-co/vega-dataflow';
-import {inherits} from '@omni-co/vega-util';
+import {Transform} from 'vega-dataflow';
+import {inherits} from 'vega-util';
 
 /**
  * Proxy the value of another operator as a pure signal value.
