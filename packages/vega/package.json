@@ -1,6 +1,6 @@
 {
   "name": "@omni-co/vega",
-  "version": "6.2.0-fork.2-beta.3",
+  "version": "6.2.0-fork.2-beta.4",
   "upstreamVersion": "6.2.0",
   "description": "The Vega visualization grammar.",
   "keywords": [
@@ -44,12 +44,12 @@
     "postpublish": "./schema-deploy.sh"
   },
   "dependencies": {
-    "@omni-co/vega-functions": "6.1.0-fork.2-beta.3",
-    "@omni-co/vega-label": "2.1.0-fork.2-beta.3",
-    "@omni-co/vega-parser": "7.1.0-fork.2-beta.3",
-    "@omni-co/vega-scenegraph": "5.1.0-fork.2-beta.3",
-    "@omni-co/vega-view": "6.1.0-fork.2-beta.3",
-    "@omni-co/vega-view-transforms": "5.1.0-fork.2-beta.3",
+    "@omni-co/vega-functions": "6.1.0-fork.2-beta.4",
+    "@omni-co/vega-label": "2.1.0-fork.2-beta.4",
+    "@omni-co/vega-parser": "7.1.0-fork.2-beta.4",
+    "@omni-co/vega-scenegraph": "5.1.0-fork.2-beta.4",
+    "@omni-co/vega-view": "6.1.0-fork.2-beta.4",
+    "@omni-co/vega-view-transforms": "5.1.0-fork.2-beta.4",
     "vega-crossfilter": "~5.1.0",
     "vega-dataflow": "~6.1.0",
     "vega-encode": "~5.1.0",
@@ -57,7 +57,7 @@
     "vega-expression": "~6.1.0",
     "vega-force": "~5.1.0",
     "vega-format": "~2.1.0",
-    "@omni-co/vega-geo": "5.1.0-fork.2-beta.3",
+    "@omni-co/vega-geo": "5.1.0-fork.2-beta.4",
     "vega-hierarchy": "~5.1.0",
     "vega-loader": "~5.1.0",
     "vega-projection": "~2.1.0",
@@ -70,7 +70,7 @@
     "vega-typings": "~2.1.0",
     "vega-util": "~2.1.0",
     "vega-voronoi": "~5.1.0",
-    "@omni-co/vega-wordcloud": "5.1.0-fork.2-beta.3"
+    "@omni-co/vega-wordcloud": "5.1.0-fork.2-beta.4"
   },
   "devDependencies": {
     "vega-schema": "*"

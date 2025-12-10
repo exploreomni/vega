@@ -1,6 +1,6 @@
 {
   "name": "@omni-co/vega-scenegraph",
-  "version": "5.1.0-fork.2-beta.3",
+  "version": "5.1.0-fork.2-beta.4",
   "description": "Vega scenegraph and renderers.",
   "license": "BSD-3-Clause",
   "type": "module",
@@ -26,7 +26,7 @@
     "prepublishOnly": "npm test && npm run build"
   },
   "dependencies": {
-    "@omni-co/vega-canvas": "2.0.0-fork.2-beta.3",
+    "@omni-co/vega-canvas": "2.0.0-fork.2-beta.4",
     "vega-loader": "^5.1.0",
     "vega-scale": "^8.1.0",
     "vega-util": "^2.1.0",
