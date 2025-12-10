@@ -1,7 +1,7 @@
 import {Group} from './constants.js';
-import {Transform} from '@omni-co/vega-dataflow';
+import {Transform} from 'vega-dataflow';
 import {GroupItem, Item} from '@omni-co/vega-scenegraph';
-import {inherits} from '@omni-co/vega-util';
+import {inherits} from 'vega-util';
 
 /**
  * Bind scenegraph items to a scenegraph mark instance.

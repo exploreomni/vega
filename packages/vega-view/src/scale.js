@@ -1,4 +1,4 @@
-import {error, hasOwnProperty} from '@omni-co/vega-util';
+import {error, hasOwnProperty} from 'vega-util';
 
 export function scale(name) {
   var scales = this._runtime.scales;

@@ -1,5 +1,5 @@
-import {Transform} from '@omni-co/vega-dataflow';
-import {inherits} from '@omni-co/vega-util';
+import {Transform} from 'vega-dataflow';
+import {inherits} from 'vega-util';
 
 /**
  * Operator whose value is simply its parameter hash. This operator is

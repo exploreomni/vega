@@ -1,5 +1,5 @@
 import {hasCornerRadius, rectangle} from '../../path/shapes.js';
-import {isFunction} from '@omni-co/vega-util';
+import {isFunction} from 'vega-util';
 
 var clip_id = 1;
 

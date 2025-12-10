@@ -3,7 +3,7 @@ import entry from './encode/entry.js';
 import rule from './encode/rule.js';
 
 import {parseExpression} from '@omni-co/vega-functions';
-import {extend, isArray} from '@omni-co/vega-util';
+import {extend, isArray} from 'vega-util';
 
 export default function(encode, type, role, style, scope, params) {
   const enc = {};

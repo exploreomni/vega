@@ -1,18 +1,18 @@
 // -- Transforms -----
 
-import {extend} from '@omni-co/vega-util';
-import {transforms} from '@omni-co/vega-dataflow';
-import * as tx from '@omni-co/vega-transforms';
+import {extend} from 'vega-util';
+import {transforms} from 'vega-dataflow';
+import * as tx from 'vega-transforms';
 import * as vtx from '@omni-co/vega-view-transforms';
-import * as encode from '@omni-co/vega-encode';
+import * as encode from 'vega-encode';
 import * as geo from '@omni-co/vega-geo';
-import * as force from '@omni-co/vega-force';
-import * as tree from '@omni-co/vega-hierarchy';
+import * as force from 'vega-force';
+import * as tree from 'vega-hierarchy';
 import * as label from '@omni-co/vega-label';
-import * as reg from '@omni-co/vega-regression';
-import * as voronoi from '@omni-co/vega-voronoi';
+import * as reg from 'vega-regression';
+import * as voronoi from 'vega-voronoi';
 import * as wordcloud from '@omni-co/vega-wordcloud';
-import * as xf from '@omni-co/vega-crossfilter';
+import * as xf from 'vega-crossfilter';
 extend(
   transforms,
   tx, vtx, encode, geo, force, label, tree, reg, voronoi, wordcloud, xf
@@ -24,13 +24,13 @@ extend(
 import * as pkg from './package.json' with { type: 'json' };
 export const version = pkg.version;
 
-export * from '@omni-co/vega-statistics';
+export * from 'vega-statistics';
 
-export * from '@omni-co/vega-time';
+export * from 'vega-time';
 
-export * from '@omni-co/vega-util';
+export * from 'vega-util';
 
-export * from '@omni-co/vega-loader';
+export * from 'vega-loader';
 
 export * from '@omni-co/vega-scenegraph';
 
@@ -49,7 +49,7 @@ export {
   transform,
   transforms,
   tupleid
-} from '@omni-co/vega-dataflow';
+} from 'vega-dataflow';
 
 export {
   scale,
@@ -58,11 +58,11 @@ export {
   interpolateColors,
   interpolateRange,
   quantizeInterpolator
-} from '@omni-co/vega-scale';
+} from 'vega-scale';
 
 export {
   projection
-} from '@omni-co/vega-projection';
+} from 'vega-projection';
 
 export {
   View
@@ -74,7 +74,7 @@ export {
   locale,
   defaultLocale,
   resetDefaultLocale
-} from '@omni-co/vega-format';
+} from 'vega-format';
 
 export {
   expressionFunction
@@ -86,13 +86,13 @@ export {
 
 export {
   context as runtimeContext
-} from '@omni-co/vega-runtime';
+} from 'vega-runtime';
 
 export {
   codegenExpression,
   parseExpression
-} from '@omni-co/vega-expression';
+} from 'vega-expression';
 
 export {
   parseSelector
-} from '@omni-co/vega-event-selector';
+} from 'vega-event-selector';

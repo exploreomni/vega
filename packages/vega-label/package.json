@@ -1,6 +1,6 @@
 {
   "name": "@omni-co/vega-label",
-  "version": "2.1.0",
+  "version": "2.1.0-fork.2",
   "description": "Label layout transform for Vega dataflows.",
   "keywords": [
     "vega",
@@ -28,13 +28,13 @@
     "prepublishOnly": "npm test && npm run build"
   },
   "dependencies": {
-    "@omni-co/vega-canvas": "^2.0.0",
-    "@omni-co/vega-dataflow": "^6.1.0",
-    "@omni-co/vega-scenegraph": "^5.1.0",
-    "@omni-co/vega-util": "^2.1.0"
+    "@omni-co/vega-canvas": "2.0.0-fork.2",
+    "vega-dataflow": "^6.1.0",
+    "@omni-co/vega-scenegraph": "5.1.0-fork.2",
+    "vega-util": "^2.1.0"
   },
   "devDependencies": {
-    "@omni-co/vega-transforms": "*"
+    "vega-transforms": "*"
   },
   "publishConfig": {
     "access": "public"

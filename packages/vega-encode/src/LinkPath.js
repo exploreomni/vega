@@ -1,5 +1,5 @@
-import {Transform} from '@omni-co/vega-dataflow';
-import {error, fastmap, inherits} from '@omni-co/vega-util';
+import {Transform} from 'vega-dataflow';
+import {error, fastmap, inherits} from 'vega-util';
 
 const sourceX = t => t.source.x;
 const sourceY = t => t.source.y;

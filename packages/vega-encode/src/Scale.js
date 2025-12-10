@@ -1,8 +1,8 @@
-import {Transform} from '@omni-co/vega-dataflow';
+import {Transform} from 'vega-dataflow';
 import {
   error, inherits, isArray, isFunction, isString, peek, stringValue,
   toSet, zoomLinear, zoomLog, zoomPow, zoomSymlog
-} from '@omni-co/vega-util';
+} from 'vega-util';
 
 import {
   Band,
@@ -33,7 +33,7 @@ import {
   quantizeInterpolator,
   scaleImplicit,
   tickCount
-} from '@omni-co/vega-scale';
+} from 'vega-scale';
 
 import {range as sequence} from 'd3-array';
 

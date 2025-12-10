@@ -1,6 +1,6 @@
 import element from './element.js';
 import {trackEventListener} from './events.js';
-import {debounce} from '@omni-co/vega-util';
+import {debounce} from 'vega-util';
 import {tickStep} from 'd3-array';
 
 const BindClass = 'vega-bind',

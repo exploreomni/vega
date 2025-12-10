@@ -1,4 +1,4 @@
-import {isObject} from '@omni-co/vega-util';
+import {isObject} from 'vega-util';
 
 const number = _ => +_ || 0;
 

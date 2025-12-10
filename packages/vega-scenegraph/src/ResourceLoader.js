@@ -1,6 +1,6 @@
 import {image} from '@omni-co/vega-canvas';
-import {loader} from '@omni-co/vega-loader';
-import {hasOwnProperty} from '@omni-co/vega-util';
+import {loader} from 'vega-loader';
+import {hasOwnProperty} from 'vega-util';
 
 export default class ResourceLoader {
   constructor(customLoader) {

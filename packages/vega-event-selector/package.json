@@ -1,5 +1,5 @@
 {
-  "name": "@omni-co/vega-event-selector",
+  "name": "vega-event-selector",
   "version": "4.0.0",
   "description": "A CSS-inspired language to select, sequence, and compose DOM events.",
   "keywords": [
@@ -28,8 +28,5 @@
     "pretest": "npm run build -- --config-test",
     "test": "tape 'test/**/*-test.js'",
     "prepublishOnly": "npm test && npm run build"
-  },
-  "publishConfig": {
-    "access": "public"
   }
 }

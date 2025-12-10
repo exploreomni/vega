@@ -2,11 +2,11 @@ import {
   codegenExpression,
   constants,
   functions
-} from '@omni-co/vega-expression';
+} from 'vega-expression';
 
 import {
   isTuple
-} from '@omni-co/vega-dataflow';
+} from 'vega-dataflow';
 
 import {
   selectionIdTest,
@@ -14,7 +14,7 @@ import {
   selectionTest,
   selectionTuples,
   selectionVisitor
-} from '@omni-co/vega-selections';
+} from 'vega-selections';
 
 import {
   cumulativeLogNormal,
@@ -30,7 +30,7 @@ import {
   sampleLogNormal,
   sampleNormal,
   sampleUniform
-} from '@omni-co/vega-statistics';
+} from 'vega-statistics';
 
 import {
   dayofyear,
@@ -42,7 +42,7 @@ import {
   utcdayofyear,
   utcweek,
   week
-} from '@omni-co/vega-time';
+} from 'vega-time';
 
 import {
   clampRange,
@@ -77,7 +77,7 @@ import {
   zoomLog,
   zoomPow,
   zoomSymlog
-} from '@omni-co/vega-util';
+} from 'vega-util';
 
 import {
   range as sequence

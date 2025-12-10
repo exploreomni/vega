@@ -6,7 +6,7 @@ import {domClear} from './util/dom.js';
 import clip from './util/canvas/clip.js';
 import resize from './util/canvas/resize.js';
 import {canvas} from '@omni-co/vega-canvas';
-import {error} from '@omni-co/vega-util';
+import {error} from 'vega-util';
 
 export default class CanvasRenderer extends Renderer {
   constructor(loader) {

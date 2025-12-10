@@ -1,8 +1,8 @@
-import {Transform} from '@omni-co/vega-dataflow';
+import {Transform} from 'vega-dataflow';
 import {
   accessorFields, array, error, hasOwnProperty,
   inherits, isFunction
-} from '@omni-co/vega-util';
+} from 'vega-util';
 import {
   forceCenter, forceCollide, forceLink,
   forceManyBody, forceSimulation, forceX, forceY

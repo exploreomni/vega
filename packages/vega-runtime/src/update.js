@@ -1,4 +1,4 @@
-import {error, isObject} from '@omni-co/vega-util';
+import {error, isObject} from 'vega-util';
 
 /**
  * Parse an event-driven operator update.

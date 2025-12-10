@@ -1,6 +1,6 @@
 {
   "name": "@omni-co/vega-cli",
-  "version": "6.1.2",
+  "version": "6.1.2-fork.2",
   "description": "Command line utilities for server-side Vega.",
   "keywords": [
     "vega",
@@ -32,7 +32,7 @@
     "test": "tape 'test/**/*-test.js'"
   },
   "dependencies": {
-    "@omni-co/vega": "6.2.0-fork.1",
+    "@omni-co/vega": "6.2.0-fork.2",
     "canvas": "^3.1.1",
     "yargs": "18"
   },

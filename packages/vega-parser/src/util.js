@@ -1,4 +1,4 @@
-import {isObject} from '@omni-co/vega-util';
+import {isObject} from 'vega-util';
 
 export function Entry(type, value, params, parent) {
   this.id = -1;

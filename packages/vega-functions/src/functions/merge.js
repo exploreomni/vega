@@ -1,4 +1,4 @@
-import {extend} from '@omni-co/vega-util';
+import {extend} from 'vega-util';
 
 export default function() {
   const args = [].slice.call(arguments);

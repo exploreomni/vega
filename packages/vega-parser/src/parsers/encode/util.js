@@ -1,4 +1,4 @@
-import {extend, hasOwnProperty, isArray, isObject} from '@omni-co/vega-util';
+import {extend, hasOwnProperty, isArray, isObject} from 'vega-util';
 
 export const encoder = _ => isObject(_) && !isArray(_)
   ? extend({}, _)

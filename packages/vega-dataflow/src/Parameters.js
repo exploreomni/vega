@@ -1,4 +1,4 @@
-import {isArray} from '@omni-co/vega-util';
+import {isArray} from 'vega-util';
 
 const CACHE = '_:mod:_';
 

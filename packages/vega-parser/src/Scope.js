@@ -15,7 +15,7 @@ import {parseExpression} from '@omni-co/vega-functions';
 import {
   array, error, extend, hasOwnProperty,
   isArray, isObject, isString, peek, stringValue
-} from '@omni-co/vega-util';
+} from 'vega-util';
 
 export default function Scope(config, options) {
   this.config = config || {};

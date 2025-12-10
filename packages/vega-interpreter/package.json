@@ -1,5 +1,5 @@
 {
-  "name": "@omni-co/vega-interpreter",
+  "name": "vega-interpreter",
   "version": "2.0.0",
   "description": "CSP-compliant interpreter for Vega expressions.",
   "keywords": [
@@ -31,12 +31,9 @@
     "prepublishOnly": "npm test && npm run build"
   },
   "dependencies": {
-    "@omni-co/vega-util": "^2.1.0"
+    "vega-util": "^2.1.0"
   },
   "devDependencies": {
     "@omni-co/vega": "*"
-  },
-  "publishConfig": {
-    "access": "public"
   }
 }

@@ -1,4 +1,4 @@
-import {truthy} from '@omni-co/vega-util';
+import {truthy} from 'vega-util';
 
 export function data(name) {
   const data = this.context.data[name];
