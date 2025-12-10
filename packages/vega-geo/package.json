@@ -1,6 +1,6 @@
 {
   "name": "@omni-co/vega-geo",
-  "version": "5.1.0-fork.2-beta.4",
+  "version": "5.1.0-fork.2",
   "description": "Geographic data transforms for Vega dataflows.",
   "keywords": [
     "vega",
@@ -29,7 +29,7 @@
     "prepublishOnly": "npm test && npm run build"
   },
   "dependencies": {
-    "@omni-co/vega-canvas": "2.0.0-fork.2-beta.4",
+    "@omni-co/vega-canvas": "2.0.0-fork.2",
     "vega-dataflow": "^6.1.0",
     "vega-projection": "^2.1.0",
     "vega-statistics": "^2.0.0",
