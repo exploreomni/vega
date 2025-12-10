@@ -1,6 +1,6 @@
 {
-  "name": "vega-wordcloud",
-  "version": "5.1.0",
+  "name": "@omni-co/vega-wordcloud",
+  "version": "5.1.0-fork.2-beta.3",
   "description": "Wordcloud layout transform for Vega dataflows.",
   "keywords": [
     "vega",
@@ -36,5 +36,8 @@
   },
   "devDependencies": {
     "vega-transforms": "*"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }

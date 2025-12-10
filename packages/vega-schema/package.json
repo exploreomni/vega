@@ -34,13 +34,13 @@
     "vega-crossfilter": "*",
     "vega-encode": "*",
     "vega-force": "*",
-    "vega-geo": "*",
+    "@omni-co/vega-geo": "*",
     "vega-hierarchy": "*",
     "@omni-co/vega-label": "*",
     "vega-regression": "*",
     "vega-transforms": "*",
     "@omni-co/vega-view-transforms": "*",
     "vega-voronoi": "*",
-    "vega-wordcloud": "*"
+    "@omni-co/vega-wordcloud": "*"
   }
 }
