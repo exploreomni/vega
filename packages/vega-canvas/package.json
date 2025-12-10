@@ -1,6 +1,6 @@
 {
-  "name": "vega-canvas",
-  "version": "2.0.0",
+  "name": "@omni-co/vega-canvas",
+  "version": "2.0.0-fork.2-beta.3",
   "description": "Canvas and Image utilities.",
   "keywords": [
     "vega",
@@ -27,5 +27,8 @@
     "pretest": "npm run build -- --config-test",
     "test": "tape 'test/**/*-test.js'",
     "prepublishOnly": "npm test && npm run build"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }

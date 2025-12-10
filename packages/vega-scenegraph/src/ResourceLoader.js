@@ -1,4 +1,4 @@
-import {image} from 'vega-canvas';
+import {image} from '@omni-co/vega-canvas';
 import {loader} from 'vega-loader';
 import {hasOwnProperty} from 'vega-util';
 

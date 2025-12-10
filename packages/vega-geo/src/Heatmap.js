@@ -1,6 +1,6 @@
 import {max} from 'd3-array';
 import {rgb} from 'd3-color';
-import {canvas} from 'vega-canvas';
+import {canvas} from '@omni-co/vega-canvas';
 import {Transform} from 'vega-dataflow';
 import {
   accessorFields, constant, extend, identity,

@@ -1,4 +1,4 @@
-import {canvas} from 'vega-canvas';
+import {canvas} from '@omni-co/vega-canvas';
 import {rederive} from 'vega-dataflow';
 import {Marks} from '@omni-co/vega-scenegraph';
 
