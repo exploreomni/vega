@@ -21,14 +21,7 @@ export default function(opt) {
         fieldvar = opt.fieldvar,
         outputGlobal = isFunction(globalvar)
           ? globalvar
-          : id => `${globalvar}["${id}"]`,
-        // JSON authors are not allowed to set properties with these names, as these are built-in to the JS Object Prototype.
-        forbiddenProperties = new Set(
-          [...Object.getOwnPropertyNames(Object.prototype)
-            .filter(name => typeof Object.prototype[name] === 'function'),
-          '__proto__'
-          ]
-        );
+          : id => `${globalvar}["${id}"]`;
 
   let globals = {},
       fields = {},
@@ -107,7 +100,9 @@ export default function(opt) {
     ObjectExpression: n => {
       // If any keys would override Object prototype methods, throw error
       for (const prop of n.properties) {
-        const keyName = prop.key.name;
+          const keyName = prop.key.type === 'Literal'
+            ? String(prop.key.value)
+            : prop.key.name;
 
         if (DisallowedObjectProperties.has(keyName)) {
           error('Illegal property: ' + keyName);

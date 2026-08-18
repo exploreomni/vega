@@ -4,6 +4,7 @@ export {
   QUARTER,
   MONTH,
   WEEK,
+  ISOWEEK,
   DATE,
   DAY,
   DAYOFYEAR,
@@ -18,8 +19,10 @@ export {
 export {
   dayofyear,
   week,
+  isoweek,
   utcdayofyear,
-  utcweek
+  utcweek,
+  utcisoweek
 } from './src/util.js';
 
 export {
@@ -39,3 +42,7 @@ export {
 export {
   default as timeBin
 } from './src/bin.js';
+
+export {
+  default as detectTimeUnits
+} from './src/detectTimeUnits.js';

@@ -214,6 +214,8 @@ tape('Evaluate expressions with white list', t => {
   t.equal(evaluate('parseInt("42")'),parseInt('42'));
   t.equal(evaluate('btoa("a")'),  btoa('a'));
   t.equal(evaluate('atob("YQ==")'), atob('YQ=='));
+  t.equal(evaluate('encodeURIComponent("hello world")'), encodeURIComponent('hello world'));
+  t.equal(evaluate('encodeURIComponent("a=b&c=d")'), encodeURIComponent('a=b&c=d'));
 
   // should eval regular expression functions
   t.equal(evaluate('test(/ain/, "spain")'), /ain/.test('spain'));
@@ -312,6 +314,48 @@ tape('Evaluate expressions with white list', t => {
   t.throws(evaluate.fn('document'));
   t.throws(evaluate.fn('self'));
   t.throws(evaluate.fn('global'));
+
+  t.end();
+});
+
+tape('Codegen rejects Object.prototype keys whether quoted or not', t => {
+  const codegen = vega.codegenExpression({ globalvar: 'global' });
+  const compile = str => () => codegen(vega.parseExpression(str));
+
+  // Unquoted keys that would shadow Object.prototype members are rejected.
+  t.throws(compile('{toString: 1}'), /Illegal property/);
+  t.throws(compile('{constructor: 1}'), /Illegal property/);
+
+  // Quoted keys must be rejected too. Their key node is a Literal, not an Identifier,
+  // so reading prop.key.name alone (undefined for a Literal) let these bypass the
+  // DisallowedObjectProperties check and compile.
+  t.throws(compile('{"toString": 1}'), /Illegal property/);
+  t.throws(compile('{"constructor": 1}'), /Illegal property/);
+  t.throws(compile('{"__proto__": 1}'), /Illegal property/);
+
+  // Ordinary keys still compile, including numeric literal keys.
+  t.doesNotThrow(compile('{a: 1}'));
+  t.doesNotThrow(compile('{"b": 2}'));
+  t.doesNotThrow(compile('{0: 1}'));
+
+  t.end();
+});
+
+tape('Codegen rejects then as an object key', t => {
+  const codegen = vega.codegenExpression({ globalvar: 'global' });
+  const compile = str => () => codegen(vega.parseExpression(str));
+
+  // `then` is not an Object.prototype member, so it is not covered by the derived
+  // set and is listed explicitly. It is rejected quoted and unquoted alike.
+  t.throws(compile('{then: 1}'), /Illegal property/);
+  t.throws(compile('{"then": 1}'), /Illegal property/);
+
+  // Also rejected when it is not the first key.
+  t.throws(compile('{a: 1, then: 2}'), /Illegal property/);
+
+  // Similarly named keys are unaffected.
+  t.doesNotThrow(compile('{then_: 1}'));
+  t.doesNotThrow(compile('{thenable: 1}'));
 
   t.end();
 });

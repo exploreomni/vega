@@ -15,7 +15,11 @@ const DisallowedMethods = new Set([
 if (typeof setImmediate === 'function') DisallowedMethods.add(setImmediate);
 
 const Visitors = {
-  Literal: ($, n) => n.value,
+  // global and sticky regexps carry lastIndex across calls, so hand out a
+  // fresh instance per evaluation, as the generated code path does
+  Literal: ($, n) => n.regex && n.value && (n.value.global || n.value.sticky)
+    ? new RegExp(n.regex.pattern, n.regex.flags)
+    : n.value,
 
   Identifier: ($, n) => {
     const id = n.name;
@@ -74,11 +78,13 @@ const Visitors = {
     $.memberDepth += 1;
     const k = $(p.key);
     $.memberDepth -= 1;
-    if (DisallowedObjectProperties.has($(p.value))) {
-      // eslint-disable-next-line no-console
+    const v = $(p.value);
+    if (DisallowedObjectProperties.has(k)) {      // eslint-disable-next-line no-console
       console.error(`Prevented interpretation of property "${k}" which could lead to insecure code execution`);
+    } else if (DisallowedMethods.has(v)) { // eslint-disable-next-line no-console
+      console.error(`Prevented interpretation of method "${k}" which could lead to insecure code execution`);
     } else {
-      o[k] = $(p.value);
+      o[k] = v;
     }
     return o;
   }, {})

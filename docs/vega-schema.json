@@ -7255,6 +7255,9 @@
                                     },
                                     {
                                       "type": "boolean"
+                                    },
+                                    {
+                                      "$ref": "#/definitions/signalRef"
                                     }
                                   ]
                                 }
@@ -9587,6 +9590,9 @@
                         },
                         {
                           "type": "boolean"
+                        },
+                        {
+                          "$ref": "#/definitions/signalRef"
                         }
                       ]
                     }
@@ -15595,6 +15601,7 @@
                       "quarter",
                       "month",
                       "week",
+                      "isoweek",
                       "date",
                       "day",
                       "dayofyear",
@@ -15651,6 +15658,16 @@
                   }
                 ]
               }
+            },
+            {
+              "$ref": "#/definitions/signalRef"
+            }
+          ]
+        },
+        "inferUnits": {
+          "anyOf": [
+            {
+              "type": "boolean"
             },
             {
               "$ref": "#/definitions/signalRef"

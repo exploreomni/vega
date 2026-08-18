@@ -22,7 +22,7 @@ export default function(canvas, width, height, origin, scaleFactor, opt) {
   }
 
   // OffscreenCanvas doesn't have a style property
-  if (inDOM && !isOffscreen && ratio !== 1) {
+  if (inDOM && !isOffscreen) {
     canvas.style.width = width + 'px';
     canvas.style.height = height + 'px';
   }

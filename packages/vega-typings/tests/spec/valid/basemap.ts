@@ -33,7 +33,7 @@ export const spec: Spec = {
     },
     {
       name: 'source_0',
-      url: 'https://cdn.jsdelivr.net/npm/vega-datasets@v1.29.0/data/world-110m.json',
+      url: 'data/world-110m.json',
       format: { feature: 'countries', type: 'topojson' },
       transform: [
         {
@@ -68,6 +68,7 @@ export const spec: Spec = {
   ],
   signals: [
     { name: 'projection_scale', update: "geoScale('projection')" },
+    { name: 'projection_translate', update: "geoTranslate('projection')" },
     {
       name: 'base_tile_size',
       update: '(2 * PI * projection_scale) / pow(2, zoom_level)'

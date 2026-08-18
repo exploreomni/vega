@@ -29,7 +29,7 @@ import { BaseLegend } from './legend.js';
 import { Locale } from './locale.js';
 import { BaseProjection } from './projection.js';
 import { InitSignal, NewSignal, SignalRef } from './signal.js';
-import { BaseTitle, TitleAnchor } from './title.js';
+import { BaseTitle, TitleAnchor, TitleFrame } from './title.js';
 
 export type KeepSignal<T> = T extends SignalRef ? SignalRef : never;
 
@@ -38,19 +38,18 @@ export type KeepSignal<T> = T extends SignalRef ? SignalRef : never;
  */
 export type ExcludeMappedValueRef<T> = {
   [P in keyof T]:
-    | Exclude<T[P], ScaledValueRef<any> | NumericValueRef | ColorValueRef>
-    | KeepSignal<T[P]>;
+    Exclude<T[P], ScaledValueRef<any> | NumericValueRef | ColorValueRef> | KeepSignal<T[P]>;
 };
 
 export interface Config
-  extends Partial<Record<MarkConfigKeys, MarkConfig>>,
-    Partial<Record<AxisConfigKeys, AxisConfig>> {
+  extends Partial<Record<MarkConfigKeys, MarkConfig>>, Partial<Record<AxisConfigKeys, AxisConfig>> {
   autosize?: AutoSize | SignalRef;
   background?: null | Color | SignalRef;
   padding?: Padding | SignalRef;
   group?: any; // TODO
   events?: {
     bind?: 'any' | 'container' | 'none';
+    container?: boolean;
     defaults?: DefaultsConfig;
     globalCursor?: boolean;
     selector?: boolean | string[];
@@ -78,8 +77,7 @@ export interface Config
  *  The defaults object should have a single property: either "prevent" (to indicate which events should have default behavior suppressed) or "allow" (to indicate only those events whose default behavior should be allowed).
  */
 export type DefaultsConfig =
-  | Record<'prevent', boolean | EventType[]>
-  | Record<'allow', boolean | EventType[]>;
+  Record<'prevent', boolean | EventType[]> | Record<'allow', boolean | EventType[]>;
 
 export type MarkConfigKeys = 'mark' | Mark['type'];
 
@@ -512,14 +510,7 @@ export type Cursor =
   | 'grabbing';
 
 export type AxisConfigKeys =
-  | 'axis'
-  | 'axisX'
-  | 'axisY'
-  | 'axisTop'
-  | 'axisRight'
-  | 'axisBottom'
-  | 'axisLeft'
-  | 'axisBand';
+  'axis' | 'axisX' | 'axisY' | 'axisTop' | 'axisRight' | 'axisBottom' | 'axisLeft' | 'axisBand';
 
 export type AxisConfig = ExcludeMappedValueRef<BaseAxis>;
 
@@ -595,6 +586,11 @@ export interface BaseLegendLayout {
   bounds?: LayoutBounds;
 
   /**
+   * The reference frame for the anchor position, one of `"group"` (the default, to anchor relative to the group width or height) or `"bounds"` (to anchor relative to the full bounding box).
+   */
+  frame?: TitleFrame | SignalRef;
+
+  /**
    * A flag to center legends within a shared orient group.
    */
   center?: boolean | SignalRef;
@@ -605,7 +601,7 @@ export interface BaseLegendLayout {
   direction?: Orientation | SignalRef;
 
   /**
-   * The pixel margin between legends within a orient group.
+   * The pixel margin between legends within an orient group.
    */
   margin?: number | SignalRef;
 

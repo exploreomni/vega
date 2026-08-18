@@ -25,6 +25,7 @@ export default {
   cos:       Math.cos,
   exp:       Math.exp,
   floor:     Math.floor,
+  hypot:     Math.hypot,
   log:       Math.log,
   max:       Math.max,
   min:       Math.min,
@@ -82,6 +83,8 @@ export default {
   btoa:         x => btoa(x),
   // Convert base64-encoded ascii to binary string
   atob:         x => atob(x),
+  // URI encoding
+  encodeURIComponent: x => encodeURIComponent(x),
 
   // regexp functions
   regexp:       RegExp,

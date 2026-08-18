@@ -68,6 +68,8 @@ export default function View(spec, options) {
   view._timers = [];
   view._eventListeners = [];
   view._resizeListeners = [];
+  view._containerListeners = [];
+  view._resizeObserver = null;
 
   // store external canvas if provided (e.g., OffscreenCanvas)
   view.canvas = options.canvas || null;
